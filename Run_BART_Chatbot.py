@@ -13,7 +13,7 @@ Created on Fri Jul 21 13:42:53 2023
 # working_folder = "/Users/descobarsalce/Library/CloudStorage/Dropbox/CV/GITHUB"
 # os.chdir(working_folder)
 
-from BART_testing import ChatbotTrainer
+from BART_ChatBot import ChatbotTrainer
 
 def main():
     """Main function to create and train a chatbot using BART.
