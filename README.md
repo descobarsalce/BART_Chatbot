@@ -7,7 +7,7 @@ This repository contains code for training and using a Chatbot based on the BART
 
 ## Files
 
-### BART_testing.py
+### BART_Chatbot.py
 
 This script defines the `ChatbotTrainer` class responsible for training the Chatbot using the BART model. The class provides methods for loading data, training the model, generating responses, and saving/loading the trained model. The file also contains a `main()` function to run the training process and save the trained model to a file.
 
@@ -18,6 +18,8 @@ This script contains the `ChatDatasetv2` class, which is a custom PyTorch datase
 ### chat_data.csv
 
 This CSV file contains the chat data used for training the Chatbot. Each row represents a message in a conversation, including the conversation ID and the message text.
+
+You can get sample data to train the model here: https://www.kaggle.com/datasets/arnavsharmaas/chatbot-dataset-topical-chat
 
 ### requirements.txt
 
