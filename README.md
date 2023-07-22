@@ -35,6 +35,34 @@ To train the Chatbot and save the trained model, run the `main()` function in `B
 python BART_testing.py
 ```
 
+Alternatively, do the following to use step by step:
+
+```python
+    parameters = {
+        "model_name": "facebook/bart-base",
+        "max_length": 128,
+        "batch_size": 64,
+        "learning_rate": 1e-5,
+        "gradient_accumulation_steps": 4,
+        "warmup_steps": 100,
+        "data_path": "topical_chat.csv",
+        "max_data": 10000,
+        "num_epochs": 10
+    }
+
+    # Create and train the chatbot
+    chatbot = ChatbotTrainer(parameters)
+    chatbot.load_data()
+    chatbot.train_bart_chatbot()
+
+    # Plot loss evolution over epochs and batches
+    chatbot.plot_performance()
+
+    # Save the trained model
+    path_saving = 'model_trained.pkl'
+    chatbot.save_model(path_saving)
+```
+
 To use the trained Chatbot for generating responses, load the trained model from the saved pickle file and call the `generate_response()` function.
 
 ```python
